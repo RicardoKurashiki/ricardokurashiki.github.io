@@ -5,10 +5,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../utils/utils.dart';
 
 class CustomDrawer extends StatelessWidget {
-  CustomDrawer({this.image, this.name, this.height, this.width});
+  CustomDrawer({this.image, this.name});
   final String image;
   final String name;
-  final double height, width;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class CustomDrawer extends StatelessWidget {
                           name,
                           style: TextStyle(
                             color: wheatColor,
-                            fontSize: 0.45 * height,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
                         )
@@ -57,7 +56,7 @@ class CustomDrawer extends StatelessWidget {
                       'Resumo',
                       style: TextStyle(
                         color: wheatColor,
-                        fontSize: 0.45 * height,
+                        fontSize: 24,
                       ),
                     ),
                     onTap: () {},
@@ -70,7 +69,7 @@ class CustomDrawer extends StatelessWidget {
                       'Projetos',
                       style: TextStyle(
                         color: wheatColor,
-                        fontSize: 0.45 * height,
+                        fontSize: 24,
                       ),
                     ),
                     onTap: () {},
@@ -83,7 +82,7 @@ class CustomDrawer extends StatelessWidget {
                       'Conquistas',
                       style: TextStyle(
                         color: wheatColor,
-                        fontSize: 0.45 * height,
+                        fontSize: 24,
                       ),
                     ),
                     onTap: () {},
@@ -96,7 +95,7 @@ class CustomDrawer extends StatelessWidget {
                       'Currículo',
                       style: TextStyle(
                         color: wheatColor,
-                        fontSize: 0.45 * height,
+                        fontSize: 24,
                       ),
                     ),
                     onTap: () {},
@@ -109,7 +108,7 @@ class CustomDrawer extends StatelessWidget {
                       'Mais Informações',
                       style: TextStyle(
                         color: wheatColor,
-                        fontSize: 0.45 * height,
+                        fontSize: 24,
                       ),
                     ),
                     onTap: () {},
@@ -124,7 +123,7 @@ class CustomDrawer extends StatelessWidget {
               children: [
                 Image.asset(
                   logoSmall,
-                  height: 1.75 * height,
+                  height: 85,
                 ),
                 Divider(
                   color: wheatColor,
