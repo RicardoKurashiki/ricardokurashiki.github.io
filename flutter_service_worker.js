@@ -3,23 +3,29 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "116d0a43e0e77ae1d85d7d201ae6824b",
-"assets/assets/fonts/tw-cen-mt-6.ttf": "9b62dc86f936227b3f7b367bd0b6c05e",
-"assets/assets/images/Eu.jpeg": "bd4b7946833c6c1bbad0aabbf41159f8",
-"assets/assets/images/LogoCircle.png": "7cddbada90b36eae1a1f5c0ffd03db89",
-"assets/assets/images/LogoSmall.png": "99e6ae3df200a93e9c23604dec705f18",
+  "assets/AssetManifest.json": "d3de332b37be74813914418cb9a49d9d",
+"assets/assets/fonts/MartelSans-Black.ttf": "80b70f77ab1b9bc2752bec4804e26c34",
+"assets/assets/fonts/MartelSans-Bold.ttf": "1da68ca7323c0552ba43bc796c652f7b",
+"assets/assets/fonts/MartelSans-Light.ttf": "f22fc6fec326126ec61ea4a809e9de70",
+"assets/assets/fonts/MartelSans-Regular.ttf": "eee8660e64f3e6d75f4e83a0d6809a48",
+"assets/assets/fonts/Roboto-Black.ttf": "5ebb24ee1112dd9562629375c387879a",
+"assets/assets/fonts/Roboto-Bold.ttf": "e07df86cef2e721115583d61d1fb68a6",
+"assets/assets/fonts/Roboto-Light.ttf": "88823c2015ffd5fa89d567e17297a137",
+"assets/assets/fonts/Roboto-Medium.ttf": "58aef543c97bbaf6a9896e8484456d98",
+"assets/assets/fonts/Roboto-Regular.ttf": "11eabca2251325cfc5589c9c6fb57b46",
+"assets/assets/fonts/Roboto-Thin.ttf": "321de678e592d0b8f44f1a82d7ca4b62",
+"assets/assets/images/Eu.jpeg": "a9ae949a205c32711854fe3e56654f27",
+"assets/assets/images/EuAlt.jpeg": "8aa0b6ec8ea4df9d542a93897c1c72d0",
+"assets/assets/images/LogoCircle.png": "44829b6c13edf5329d610fe8f345634f",
+"assets/assets/images/LogoSmall.png": "4679b7aa9a0941f54257f94326c2226b",
 "assets/assets/images/skills/c.png": "88eef2c4956cf1d9ffbb00a2059d9dd6",
-"assets/assets/images/skills/chrome.png": "6a341ef5ca34e6b2080c7fa50476329a",
 "assets/assets/images/skills/dart.png": "6e59186bcba50235160fdb865f205656",
-"assets/assets/images/skills/excel.png": "cd79415e22eb61b27c38e43b144003fa",
 "assets/assets/images/skills/firebase.png": "a1a4f6968d81ce96a4391a38eba1c568",
 "assets/assets/images/skills/flutter.png": "023350440992ed7824e773882888f366",
 "assets/assets/images/skills/github.png": "ec3a60c8c6539a07eb70b52f6737ea6e",
 "assets/assets/images/skills/jira.png": "2451cb6264e24b38890ba51beceeb300",
 "assets/assets/images/skills/matlab.png": "cf28632239db6e02bc09bcca6bf5360f",
-"assets/assets/images/skills/opera.png": "5f8d24f27a9ad6ba5002dfbce5b1e78c",
 "assets/assets/images/skills/photoshop.png": "a7d5c3282d1f002ed0cc25e47c1afdff",
-"assets/assets/images/skills/powerpoint.png": "7523262a80c899206bb0874dae5d7153",
 "assets/assets/images/skills/python.png": "c290a443b3f240732252a813d4a6cf65",
 "assets/assets/images/skills/spyder.png": "fceb609a06f51727286b6d5da2037d65",
 "assets/assets/images/skills/sqlite.png": "f697ba0c9244a5495766983a27636ff4",
@@ -27,10 +33,9 @@ const RESOURCES = {
 "assets/assets/images/skills/trello.png": "768c8a15dc69e44ca29077da473c70bb",
 "assets/assets/images/skills/vscode.png": "45658568f2499cbe84199e22c86144c6",
 "assets/assets/images/skills/windows.png": "dc462deeb4218fdf0978067f6b06d33a",
-"assets/assets/images/skills/word.png": "f857d9e340a7a502fef3b4d98975ca67",
-"assets/FontManifest.json": "0183563d6340e3f960301909509d7dd2",
+"assets/FontManifest.json": "b4f4ae5c02cf57149b32e511971c98bc",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "dcaf07d145f59c05fdfb2e5335824812",
+"assets/NOTICES": "1f1ed25b6e8f52f6504c2b33dea09a11",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/flutter_icons/fonts/AntDesign.ttf": "3a2ba31570920eeb9b1d217cabe58315",
 "assets/packages/flutter_icons/fonts/Entypo.ttf": "744ce60078c17d86006dd0edabcd59a7",
@@ -48,14 +53,14 @@ const RESOURCES = {
 "assets/packages/flutter_icons/fonts/SimpleLineIcons.ttf": "d2285965fe34b05465047401b8595dd0",
 "assets/packages/flutter_icons/fonts/weathericons.ttf": "4618f0de2a818e7ad3fe880e0b74d04a",
 "assets/packages/flutter_icons/fonts/Zocial.ttf": "5cdf883b18a5651a29a4d1ef276d2457",
-"favicon.ico": "7cddbada90b36eae1a1f5c0ffd03db89",
-"icons/Icon-192.png": "46d28db8ab50c3512f0697de5680f844",
-"icons/Icon-512.png": "011dacfc9ebb02970390300e109d3229",
-"index.html": "cd23dc94afad5ee955fbee0543f301e2",
-"/": "cd23dc94afad5ee955fbee0543f301e2",
-"main.dart.js": "26044abf3a7d94cb7218061152ed9651",
-"manifest.json": "5a2c0526f1fe73e6f211bc7a9d15c210",
-"version.json": "426313f2f3133c2f20415344c4a22df3"
+"favicon.png": "7e8f64506c123009591d10a569cb1e54",
+"icons/Icon-192.png": "fc9f8badf717769af9099bbd046b285a",
+"icons/Icon-512.png": "4da584d1bf04143ac8e45e20aff91218",
+"index.html": "fe92202990815ad0313f98888c341ecc",
+"/": "fe92202990815ad0313f98888c341ecc",
+"main.dart.js": "8912d394affa2a0dcda454abfabcf10a",
+"manifest.json": "84d2b1621947f2cd687a8f7d6257ca35",
+"version.json": "9ae36a939748078b2a99a78b21090100"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -73,7 +78,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
     })
   );
 });

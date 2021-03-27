@@ -20,13 +20,13 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
+  <meta name="apple-mobile-web-app-title" content="meu_portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.ico"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>Ricardo Godoi Kurashiki - Portfólio</title>
+  <title>Portfolio - Ricardo Godoi Kurashiki</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -36,10 +36,31 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3863725085');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3193226966');
       });
     }
   </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAaa6upvF5fKimZdg1BppEuROlnN4sRTpc",
+      authDomain: "portfolio-pessoal-f1aa9.firebaseapp.com",
+      projectId: "portfolio-pessoal-f1aa9",
+      storageBucket: "portfolio-pessoal-f1aa9.appspot.com",
+      messagingSenderId: "577398346527",
+      appId: "1:577398346527:web:c8c1d87fcd029f9315162a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
