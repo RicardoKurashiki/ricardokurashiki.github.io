@@ -98,12 +98,12 @@ class HomePageState extends State<HomePage> {
       clipBehavior: Clip.antiAlias,
       children: <Widget>[
         ...backgroundDecoration,
-        Padding(
-          padding: const EdgeInsets.all(24),
-          child: Row(
-            children: [
-              Expanded(
-                flex: 3,
+        Row(
+          children: [
+            Expanded(
+              flex: 3,
+              child: Padding(
+                padding: const EdgeInsets.all(24).copyWith(right: 0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,16 +125,20 @@ class HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              Expanded(
-                  flex: 4,
+            ),
+            Expanded(
+                flex: 4,
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(24),
+                  physics: const BouncingScrollPhysics(),
                   child: Wrap(
                     alignment: WrapAlignment.center,
                     runSpacing: 32,
                     spacing: 32,
                     children: buildSkillBubbles(),
-                  )),
-            ],
-          ),
+                  ),
+                )),
+          ],
         ),
       ],
     );
