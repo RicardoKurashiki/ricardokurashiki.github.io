@@ -1,8 +1,10 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:ricardo_kurashiki_portfolio/app/modules/home/models/skill_model.dart';
+
 import '../../../pages/base_page.dart';
 import '../../../utils.dart';
+import '../models/skill_model.dart';
 import '../stores/home_store.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +16,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final HomeStore store = Modular.get();
+  final _scrollController = ScrollController();
 
   Widget _buildPage() {
     const introductionText =
@@ -48,13 +51,21 @@ class HomePageState extends State<HomePage> {
 
     List<Widget> buildSkillBubbles() {
       List<SkillModel> projectsIcons = [
-        SkillModel(title: "Dart", icon: SkillIcons.dart, percentage: 0.6),
-        SkillModel(title: "Flutter", icon: SkillIcons.flutter, percentage: 0.75),
+        SkillModel(title: "Dart", icon: SkillIcons.dart, percentage: 0.8),
+        SkillModel(title: "Flutter", icon: SkillIcons.flutter, percentage: 0.9),
         SkillModel(title: "Git", icon: SkillIcons.git, percentage: 0.45),
-        SkillModel(title: "GitHub", icon: SkillIcons.github, percentage: 0.8),
+        SkillModel(title: "GitHub", icon: SkillIcons.github, percentage: 1),
         SkillModel(title: "Visual Studio Code", icon: SkillIcons.vscode, percentage: 0.94),
+        SkillModel(title: "C", icon: SkillIcons.c, percentage: 0.12),
+        SkillModel(title: "C#", icon: SkillIcons.csharp, percentage: 0.33),
+        SkillModel(title: "Colab", icon: SkillIcons.colab, percentage: 0.42),
+        SkillModel(title: "Java", icon: SkillIcons.java, percentage: 0.52),
+        SkillModel(title: "Javascript", icon: SkillIcons.javascript, percentage: 0.31),
+        SkillModel(title: "Python", icon: SkillIcons.python, percentage: 0.64),
+        SkillModel(title: "Spyder", icon: SkillIcons.spyder, percentage: 0.83),
       ];
-      return List.generate(
+
+      final skillList = List.generate(
         projectsIcons.length,
         (index) {
           double size = 100 + (100 * projectsIcons[index].percentage);
@@ -91,6 +102,10 @@ class HomePageState extends State<HomePage> {
           );
         },
       );
+
+      skillList.shuffle();
+
+      return skillList;
     }
 
     return Stack(
@@ -128,14 +143,19 @@ class HomePageState extends State<HomePage> {
             ),
             Expanded(
                 flex: 4,
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.all(24),
-                  physics: const BouncingScrollPhysics(),
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
-                    runSpacing: 32,
-                    spacing: 32,
-                    children: buildSkillBubbles(),
+                child: Scrollbar(
+                  controller: _scrollController,
+                  isAlwaysShown: true,
+                  child: SingleChildScrollView(
+                    controller: _scrollController,
+                    padding: const EdgeInsets.all(24),
+                    physics: const BouncingScrollPhysics(),
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      runSpacing: 32,
+                      spacing: 32,
+                      children: buildSkillBubbles(),
+                    ),
                   ),
                 )),
           ],
