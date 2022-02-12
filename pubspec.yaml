@@ -30,6 +30,8 @@ flutter:
 
   assets:
     - assets/svgs/
+    - assets/icons/
+
   fonts:
     - family: "Montserrat"
       fonts:
